@@ -23,3 +23,29 @@
   /* transform-origin: top right; */
   transition: opacity 200ms ease, transform 200ms ease;
 }
+
+.show-accordion-enter {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.show-accordion-enter.show-accordion-enter-active {
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  transition: all 300ms ease;
+}
+
+.show-accordion-leave {
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+
+.show-accordion-leave.show-accordion-leave-enter {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
