@@ -52,8 +52,8 @@ class Button extends React.Component {
         </button>
         <ReactCSSTransitionGroup
           transitionName="example"
-          transitionEnterTimeout="300"
-          transitionLeaveTimeout="300"
+          transitionEnterTimeout="200"
+          transitionLeaveTimeout="200"
         >
           {showDropdown ? (
             <Div key="one">
