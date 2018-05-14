@@ -6,6 +6,19 @@ const Item = styled.a`
   border-bottom: 1px solid #f8f8f8;
   display: block;
   cursor: pointer;
+  text-align: left;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span.icon {
+      background: #000000;
+      width: 15px;
+      height: 2px;
+    }
+  }
 
   .description {
     padding-bottom: 16px;
@@ -26,7 +39,10 @@ class AccordionItem extends React.Component {
     const { data: { title, description }, count } = this.props;
     return (
       <Item onClick={this.toggleOpen}>
-        <p className="title">{title}</p>
+        <p className="title">
+          <span>{title}</span>
+          <span class="icon" />
+        </p>
         <ReactCSSTransitionGroup
           transitionName="show-accordion"
           transitionEnterTimeout="250"
